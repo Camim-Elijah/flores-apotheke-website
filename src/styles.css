@@ -283,17 +283,18 @@ tbody th { font-weight: normal; }
   * { transition: none !important; }
 }
 
-/* Kompakter persönlicher Einblick unter dem Team. */
-.rider-story { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 26px; align-items: center; margin-block: -20px 32px; padding-top: 24px; border-top: 1px solid var(--line); }
-.rider-story figure { margin: 0; }
-.rider-story img { display: block; width: 220px; height: auto; border-radius: 6px; }
-.rider-copy { max-width: 540px; }
-.rider-copy .eyebrow { font-size: 12px; margin-bottom: 8px; }
-.rider-copy h3 { font: 25px/1.25 var(--serif); margin-bottom: 10px; }
-.rider-copy > p:not(.eyebrow) { color: var(--muted); font-size: 16px; margin: 0; }
-@media (max-width: 600px) {
-  .rider-story { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; align-items: start; }
-  .rider-story img { width: 100px; }
-  .rider-copy h3 { font-size: 21px; }
-  .rider-copy > p:not(.eyebrow) { font-size: 14px; }
+/* Persönlicher Abschluss des Teams: ausgewogene Bild-Text-Aufteilung. */
+.rider-story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: #f0f1e9; margin-block: -16px 24px; }
+.rider-story figure { margin: 0; min-width: 0; }
+.rider-story img { display: block; width: 100%; height: clamp(280px, 27vw, 340px); object-fit: cover; object-position: center 58%; }
+.rider-copy { align-self: center; padding: 28px clamp(28px, 3.5vw, 48px); }
+.rider-copy .eyebrow { font-size: 12px; margin-bottom: 14px; }
+.rider-copy h3 { font: clamp(28px, 2.7vw, 36px)/1.2 var(--serif); letter-spacing: -.5px; margin-bottom: 16px; }
+.rider-copy > p:not(.eyebrow) { color: var(--muted); font-size: 17px; line-height: 1.65; margin: 0; max-width: 43ch; }
+@media (max-width: 700px) {
+  .rider-story { grid-template-columns: 1fr; margin-block: -12px 16px; }
+  .rider-story img { height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+  .rider-copy { padding: 24px; }
+  .rider-copy h3 { font-size: 28px; }
+  .rider-copy > p:not(.eyebrow) { font-size: 16px; }
 }
