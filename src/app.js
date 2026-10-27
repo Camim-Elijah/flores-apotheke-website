@@ -1,6 +1,6 @@
 import { products, productLines } from './products.js';
 import { setQuantity, total, restoreCart } from './cart.js';
-import { escapeHtml, priceInformation, regulatoryInformation } from './product-info.js';
+import { escapeHtml, priceInformation, regulatoryInformation } from './product-info.js?v=20261027-svg';
 import { setupMap } from './location.js';
 
 const $ = selector => document.querySelector(selector);

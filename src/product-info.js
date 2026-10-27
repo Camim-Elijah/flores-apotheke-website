@@ -29,9 +29,9 @@ export function regulatoryInformation(line) {
       <li>${text(r.storage || 'Die produktspezifischen Lagerbedingungen sind noch abzugleichen.')}</li>
     </ul><p>Bei Erkrankungen oder gleichzeitiger Medikamenteneinnahme die Verwendung mit der behandelnden Praxis oder der Apotheke besprechen.</p></details>
     <details><summary>Anbieter & Originalunterlagen</summary><p>${text(r.operator)}</p>
-      <p><a href="${text(r.operatorSource)}" target="_blank" rel="noopener noreferrer">Aktuelle Anbieterangaben ↗</a></p>
-      ${r.leaflet ? `<p><a href="${text(r.leaflet)}" target="_blank" rel="noopener noreferrer">Hersteller-Beipackzettel öffnen (PDF) ↗</a></p>` : ''}
-      <p><a href="${text(line.source)}" target="_blank" rel="noopener noreferrer">Produktseite des Herstellers ↗</a></p></details>
+      <p><a href="${text(r.operatorSource)}" target="_blank" rel="noopener noreferrer">Aktuelle Anbieterangaben <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></p>
+      ${r.leaflet ? `<p><a href="${text(r.leaflet)}" target="_blank" rel="noopener noreferrer">Hersteller-Beipackzettel öffnen (PDF) <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></p>` : ''}
+      <p><a href="${text(line.source)}" target="_blank" rel="noopener noreferrer">Produktseite des Herstellers <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></p></details>
     <details class="data-review"><summary>Datenstand & noch offene Angaben</summary>
       <p>Herstellerquellen, abgerufen am ${text(r.dataDate)}. Die Aktualität zur tatsächlich abgegebenen Packung ist noch nicht freigegeben. Nur Demo, kein kaufbarer Artikel.</p>
       ${r.review ? `<p>${text(r.review)}</p>` : ''}

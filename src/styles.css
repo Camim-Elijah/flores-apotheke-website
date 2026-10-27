@@ -298,3 +298,9 @@ tbody th { font-weight: normal; }
   .rider-copy h3 { font-size: 28px; }
   .rider-copy > p:not(.eyebrow) { font-size: 16px; }
 }
+
+/* Draw UI symbols as vectors so their appearance does not depend on emoji fonts. */
+.ui-icon { display: inline-block; width: 1.1em; height: 1.1em; vertical-align: -.15em; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.hero-photo figcaption .ui-icon { width: 1em; height: 1em; }
+.map-pin .ui-icon { width: 40px; height: 40px; }
+.close .ui-icon { width: 24px; height: 24px; }
